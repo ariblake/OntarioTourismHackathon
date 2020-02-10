@@ -1,7 +1,7 @@
 # Hackathon 2020 - Ontario Tourism
 This is the hackaton midterm for semester two at Fanshawe College. Each team has to design, brand and code a website and video components for the topic of Ontario tourism.
 
-Specifically for classes 3014 and 3012, we have to build a responsive one-page app using the Vue.js framework that that promotes Ontario tourism. The website will use Vue components and the Fetch API. The site will have a sign-up form for the user to receieve promotional emails. The form will store and update user data in a MySQL Database.
+Specifically for classes MMED 3014 and 3012, we have to build a responsive one-page app using the Vue.js framework that that promotes Ontario tourism. The website will use Vue components and the Fetch API. The site will have a sign-up form for the user to receieve promotional emails. The form will store and update user data in a MySQL Database.
 
 ## Project Members
 
