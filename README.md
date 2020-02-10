@@ -4,7 +4,10 @@ This is the project for Hackathon 2020. We have to build a responsive one page a
 ## Project Members
 
 * **Ariana Blake** (https://github.com/ariblake)
-
+* **Sarah Conway** (https://github.com/sarahconway69704)
+* **Yasmina Orellana-Tavares** (https://github.com/yasminamayot)
+* **Hillary Strong** (https://github.com/hillary25)
+* **Ryan Sun** (https://github.com/unscientifi)
 
 ## Built With
 
