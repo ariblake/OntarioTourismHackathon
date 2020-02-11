@@ -2,7 +2,7 @@ export default {
     template: `
     <section id="regForm">
             <form action="admin/sign-up.php" method="post">
-                <p>We hope you enjoyed reading about Ontario just as much as we do! Subscribe to our newsletter to get notifications about an event you might find interesting!<p>
+                <p>We hope you enjoyed reading about Ontario just as much as we do! Subscribe to our newsletter to get notifications about an event you might find interesting!</p>
 
                 <label for ="first-name">First Name</label>
                 <input id="first-name" name="fname" type="text">

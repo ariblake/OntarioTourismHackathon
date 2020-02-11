@@ -6,7 +6,7 @@ export default {
             <div class="cell small-12">
                 <h2>Explore Ontario</h2>
             </div>
-            <div v-for="item in explore" class="cell small-6 large-3">
+            <div v-for="item in explore" class="cell small-6 large-3" id="exploreItem">
                 <img :src="'images/' + item.icon" :alt="item.alt">
                 <h3>{{ item.title }}</h3>
                 <p>{{ item.description }}</p>
