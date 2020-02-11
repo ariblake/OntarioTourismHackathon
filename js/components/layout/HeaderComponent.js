@@ -4,10 +4,10 @@ export default {
     template: `
     <header class="grid-x" id="mainHeader">
         <h1 class="hide">Ontario Tourism</h1>
-        <div class="cell small-4">
+        <div class="cell small-4 large-2">
             <img src="images/logo.svg" alt="logo" id="logoImg">
         </div>
-        <nav id="mainNav" class="cell small-8">
+        <nav id="mainNav" class="cell small-8 large-10">
             <ul>
                 <li><router-link to="/">Home</router-link></li>
                 <li><router-link to="/contact">Register</router-link></li>

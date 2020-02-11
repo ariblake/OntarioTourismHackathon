@@ -36,3 +36,19 @@
     padding: 10%;
     padding-bottom: 30%;
 }
+
+@media screen and (min-width: 64.063em) { /* min-width 1025px, large screens */ 
+    #logoImg {
+        width: 80%;
+    }
+
+    #mainNav {
+        padding: 3%;
+    }
+
+    #heroSection {
+        padding-left: 22%;
+        padding-bottom: 20%;
+    }
+
+ } 

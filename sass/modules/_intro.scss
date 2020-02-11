@@ -20,3 +20,19 @@
         background-color: #eab01f;
     }
 }
+
+@media screen and (min-width: 64.063em) { /* min-width 1025px, large screens */ 
+    #introSection {
+        padding-top: 10%;
+    
+        p {
+            margin-bottom: 10%;
+        }
+    
+        a {
+            border-radius: 25px;
+            padding: 2%;
+        }
+    
+    }
+}

@@ -26,3 +26,12 @@
         cursor: pointer;
     }
 }
+
+@media screen and (min-width: 64.063em) { /* min-width 1025px, large screens */ 
+    #regForm {
+        button {
+            padding: 2% 5%;
+        }
+    }
+    
+}
