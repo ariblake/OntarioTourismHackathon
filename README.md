@@ -14,7 +14,7 @@ Specifically for classes MMED 3014 and 3012, we have to build a responsive one-p
 * [SASS](https://sass-lang.com/) - Stylesheet Language
 * [mySQL](https://www.mysql.com/) - Database
 * [Vue.js](https://vuejs.org/) - JavaScript Framework
-* [Bootstrap](https://getbootstrap.com/) - Framework
+* Foundation - Framework
 
 ## Goals
 - [ ] Create and link a database storing user information
