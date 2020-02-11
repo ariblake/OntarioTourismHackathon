@@ -6,7 +6,7 @@ export default {
             <p>Copyright 2020, Ontario Tourism.</p>
             <router-link to="/contact">Register</router-link>
             <img src="images/logo2.svg" alt="logo" id="logoImg">
-            <div id="socialMedia>
+            <div id="socialMedia">
                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                 <a href="https://www.facebook.com/" target="_blank">Facebook</a>
             </div>
