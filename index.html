@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900|Varela+Round&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
     <title>Ontario Summer</title>
+
+    
 </head>
 
 <body>
     <main id="app">
-        
-        <form action="admin/sign-up.php" method="post">
-            First Name: <input type="text" name="firstname"><br>
-            Last Name: <input type="text" name="lastname"><br>
-            E-mail: <input type="text" name="email"><br>
-            Country: <option value="" class="grey" name="country"></option>
-            <input type="submit">
-            </form>
+
+        <router-view></router-view>
+
     </main>
     
+    <script defer src="js/foundation.js"></script>
     <script defer src="js/main.js" type="module"></script>
 </body>
 </html>

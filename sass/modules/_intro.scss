@@ -1,0 +1,22 @@
+#introSection {
+    height: $fullscreen;
+    text-align: center;
+    padding-top: 40%;
+
+    p {
+        margin-bottom: 10%;
+    }
+
+    a {
+        background-color: $main-yellow;
+        border-radius: 25px;
+        padding: 5%;
+        color: $main-white;
+        font-family: $header-font;
+        transition: .5s;
+    }
+
+    a:hover {
+        background-color: #eab01f;
+    }
+}

@@ -1,19 +1,18 @@
 <?php
-ini_set('display_errors', 1);
-require_once ('config.php');
 
 class Database
 {
-    // Note: specify your own database credentials
     private $host = "localhost";
     private $db_name = "ontario_form";
     private $username = "root";
     private $password = "root";
-
-    private static $instance = null;
     public $conn;
 
-    private function __construct(){
+    // get the database connection
+    public function getConnection()
+    {
+
+        $this->conn = null;
 
         $db_dsn = array(
             'host'    => $this->host,
@@ -39,7 +38,7 @@ class Database
             );
             exit;
         }
+
+        return $this->conn;
     }
-
 }
-

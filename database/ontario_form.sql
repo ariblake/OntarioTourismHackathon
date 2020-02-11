@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 10, 2020 at 09:17 PM
+-- Generation Time: Feb 10, 2020 at 04:25 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_country` (
-  `country_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `country_code` varchar(2) NOT NULL DEFAULT '',
   `country_name` varchar(100) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -36,7 +36,7 @@ CREATE TABLE `tbl_country` (
 -- Dumping data for table `tbl_country`
 --
 
-INSERT INTO `tbl_country` (`country_id`, `country_code`, `country_name`) VALUES
+INSERT INTO `tbl_country` (`id`, `country_code`, `country_name`) VALUES
 (1, 'US', 'United States'),
 (2, 'CA', 'Canada'),
 (3, 'AF', 'Afghanistan'),
@@ -289,10 +289,16 @@ CREATE TABLE `tbl_user` (
   `lastname` varchar(50) NOT NULL,
   `email` varchar(70) NOT NULL,
   `country` varchar(100) NOT NULL,
-  `subscribe` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `lastupdate` datetime NOT NULL,
-  `country_id` int(11) NOT NULL
+  `subscribe` datetime NOT NULL,
+  `lastupdate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`id`, `firstname`, `lastname`, `email`, `country`, `subscribe`, `lastupdate`) VALUES
+(1, 'testuser', 'aaa', 'test@user.ca', 'canada', '2020-02-10 00:00:00', '2020-02-10 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -302,7 +308,7 @@ CREATE TABLE `tbl_user` (
 -- Indexes for table `tbl_country`
 --
 ALTER TABLE `tbl_country`
-  ADD PRIMARY KEY (`country_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_user`
@@ -318,7 +324,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_country`
 --
 ALTER TABLE `tbl_country`
-  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
