@@ -1,36 +1,33 @@
-var gulp          = require('gulp');
-var browserSync   = require('browser-sync').create();
-var $             = require('gulp-load-plugins')();
-var autoprefixer  = require('autoprefixer');
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const browserSync = require("browser-sync").create();
+const autoprefixer = require("gulp-autoprefixer");
 
-var sassPaths = [
-  'node_modules/foundation-sites/scss',
-  'node_modules/motion-ui/src'
-];
+gulp.task("sass", function () {
+  return gulp
+    .src("./sass/**/*.scss")
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest("./css"));
+});
 
-function sass() {
-  return gulp.src('scss/app.scss')
-    .pipe($.sass({
-      includePaths: sassPaths,
-      outputStyle: 'compressed' // if css compressed **file size**
-    })
-      .on('error', $.sass.logError))
-    .pipe($.postcss([
-      autoprefixer({ browsers: ['last 2 versions', 'ie >= 9'] })
-    ]))
-    .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream());
-};
+gulp.task("watch", function () {
+  gulp.watch("./sass/**/*.scss", gulp.series("sass", "reload"));
+  gulp.watch("./*.{html,js,css}", gulp.series("reload"));
+});
 
-function serve() {
+gulp.task("serve", function () {
   browserSync.init({
-    server: "./"
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
   });
+});
 
-  gulp.watch("scss/*.scss", sass);
-  gulp.watch("*.html").on('change', browserSync.reload);
-}
+gulp.task("reload", function (done) {
+  browserSync.reload();
+  done();
+});
 
-gulp.task('sass', sass);
-gulp.task('serve', gulp.series('sass', serve));
-gulp.task('default', gulp.series('sass', serve));
+gulp.task("default", gulp.parallel("serve", "watch"));

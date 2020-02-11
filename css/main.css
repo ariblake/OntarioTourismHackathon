@@ -1,0 +1,133 @@
+#mainHeader {
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/heroImg.jpg) no-repeat fixed;
+  background-size: 220%;
+  height: 93vh; }
+
+#mainNav {
+  padding: 8%;
+  text-align: right; }
+  #mainNav ul {
+    list-style-type: none; }
+    #mainNav ul li {
+      display: inline;
+      padding-left: 10%;
+      color: #ffffff; }
+      #mainNav ul li a {
+        color: white;
+        font-family: "Varela Round", sans-serif;
+        transition: .5s; }
+      #mainNav ul li a:hover {
+        color: #25f463; }
+
+#heroSection {
+  color: #ffffff;
+  text-align: center;
+  padding: 10%;
+  padding-bottom: 30%; }
+
+#introSection {
+  height: 93vh;
+  text-align: center;
+  padding-top: 40%; }
+  #introSection p {
+    margin-bottom: 10%; }
+  #introSection a {
+    background-color: #fec925;
+    border-radius: 25px;
+    padding: 5%;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    transition: .5s; }
+  #introSection a:hover {
+    background-color: #eab01f; }
+
+#vidSection video {
+  width: 100%; }
+
+#exploreSection {
+  height: 93vh;
+  text-align: center;
+  padding-top: 8%; }
+  #exploreSection img {
+    width: 40%; }
+
+#galleryItem {
+  position: relative; }
+
+#overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: 1s ease;
+  background-color: #59b18f; }
+
+#galleryItem:hover #overlay {
+  opacity: .9; }
+
+#overlayText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+#regForm {
+  background-color: #c9e3da;
+  padding: 10%; }
+  #regForm h2 {
+    text-align: center; }
+  #regForm label {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1em; }
+  #regForm button {
+    display: block;
+    background-color: #fec925;
+    border-radius: 20px;
+    padding: 5%;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    transition: .5s;
+    margin-top: 10%; }
+  #regForm button:hover {
+    background-color: #efb501;
+    cursor: pointer; }
+
+#mainFooter {
+  text-align: center;
+  padding: 5%; }
+  #mainFooter img {
+    width: 15%; }
+  #mainFooter #socialMedia a {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #02b1ce;
+    transition: .5s; }
+  #mainFooter #socialMedia a:hover {
+    color: #02869b; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em; }
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase; }
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6em; }
