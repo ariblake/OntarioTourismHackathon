@@ -1,19 +1,23 @@
 export default {
     template: `
     <section id="regForm">
-            <form>
-              <label style="text-align:center;" for="country">Country:</label>
-              <input v-model="input.country" style="text-align:center;" type="text" id="country" name="country" value="" placeholder="Country" required>
-              <label style="text-align:center;" for="firstname">First Name:</label>
-              <input v-model="input.firstname" type="text" style="text-align:center;" id="firstname" name="firstname" value="" placeholder="First Name" required>
-              <label style="text-align:center;" for="lastname">Last Name:</label>
-              <input v-model="input.lastname" type="text" style="text-align:center;" id="lastname" name="lastname" value="" placeholder="Last Name" required>
-              <label style="text-align:center;" for="email">Email:</label>
-              <input v-model="input.email" type="email" style="text-align:center;" id="email" name="email" value="" placeholder="Email Address" required>
-              <button v-on:click="signup()" type="submit" name="submit" class="button success">Submit</button>
-      </form>
+            <form action="admin/sign-up.php" method="post">
+                <p>We hope you enjoyed reading about Ontario just as much as we do! Subscribe to our newsletter to get notifications about an event you might find interesting!<p>
+
+                <label for ="first-name">First Name</label>
+                <input id="first-name" name="fname" type="text">
+
+                <label for ="last-name">Last Name</label>
+                <input id="last-name" name="lname" type="text">
+
+                <label for ="email">Email</label>
+                <input id="email" name="email" type="email">
+
+                <label for ="country">Country</label>
+                <input id="country" name="country" type="text">
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     `,
-
-
 }

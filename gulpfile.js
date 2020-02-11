@@ -1,33 +1,16 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const browserSync = require("browser-sync").create();
-const autoprefixer = require("gulp-autoprefixer");
+const gulp = require ('gulp');
+const sass = require ('gulp-sass');
 
-gulp.task("sass", function () {
-  return gulp
-    .src("./sass/**/*.scss")
+function compile(done) {
+    gulp.src("sass/**/*.scss")
     .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(gulp.dest("./css"));
-});
+    .on("error", sass.logError)
+    .pipe(gulp.dest("css"))
+}
 
-gulp.task("watch", function () {
-  gulp.watch("./sass/**/*.scss", gulp.series("sass", "reload"));
-  gulp.watch("./*.{html,js,css}", gulp.series("reload"));
-});
+function watch() {
+    gulp.watch("sass/*.scss").on('change', compile);
+}
 
-gulp.task("serve", function () {
-  browserSync.init({
-    server: {
-      baseDir: "./",
-      index: "index.html"
-    }
-  });
-});
-
-gulp.task("reload", function (done) {
-  browserSync.reload();
-  done();
-});
-
-gulp.task("default", gulp.parallel("serve", "watch"));
+exports.compile = compile;
+exports.watch = watch;
