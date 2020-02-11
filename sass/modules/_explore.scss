@@ -7,3 +7,21 @@
         width: 40%;
     }
 }
+
+@media screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
+    #exploreSection {
+        padding: 8% 10%;
+
+        h2 {
+            margin-bottom: 2%;
+        }
+    }
+
+    #exploreItem {
+        padding: 2%;
+
+        img {
+            margin-bottom: 2%;
+        }
+    }
+}
