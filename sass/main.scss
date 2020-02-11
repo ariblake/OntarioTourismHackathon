@@ -2,6 +2,9 @@
 @import 'modules/_header';
 @import 'modules/_intro';
 @import 'modules/_video';
+@import 'modules/_explore';
+@import 'modules/_gallery';
+@import 'modules/_register';
 @import 'modules/_footer';
 
 h1 {
@@ -19,4 +22,10 @@ h2 {
 h3 {
     font-family: $header-font;
     text-transform: uppercase;
+}
+
+h4 {
+    font-family: $header-font;
+    text-transform: uppercase;
+    font-size: 1.6em;
 }

@@ -1,11 +1,20 @@
 #mainFooter{
-    background-color: $main-green;
-    padding-top: 5%;
+    //background-color: $main-green;
+    text-align: center;
+    padding: 5%;
     img {
         width: 15%;
     }
 
     #socialMedia {
-        float: right;
+        a {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: $main-blue;
+            transition: .5s;
+        }
+        a:hover {
+            color: darken($main-blue, $amount: 10);
+        }
     }
 }

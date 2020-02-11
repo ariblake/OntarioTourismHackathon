@@ -15,7 +15,9 @@ export default {
         <ExploreComponent
             v:bind:icon="explore.icon" v:bind:title="explore.title" v:bind:description="explore.description"
         />
-        <GalleryComponent/>
+        <GalleryComponent
+            v:bind:image="gallery.image" v:bind:title="gallery.title" v:bind:alt="gallery.alt"
+        />
         <FooterComponent/>
     </section>
     `,

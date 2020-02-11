@@ -2,7 +2,7 @@ export default {
     template: `
     <section id="regForm">
             <form action="admin/sign-up.php" method="post">
-                <h1>Register for more info</h1>
+                <h2>Form title</h2>
 
                 <label for ="first-name">First Name</label>
                 <input id="first-name" name="fname" type="text">
@@ -14,7 +14,7 @@ export default {
                 <input id="email" name="email" type="email">
 
                 <label for ="country">Country</label>
-                <input id="country" name="country" type="country">
+                <input id="country" name="country" type="text">
 
                 <button type="submit">Submit</button>
             </form>
