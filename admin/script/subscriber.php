@@ -1,18 +1,18 @@
 <?php
-
+require_once 'config.php';
 function createSubscriber($firstname, $lastname, $email, $country) {
     $pdo = Database::getInstance()->getConnection();
-    $query = ' SELECT COUNT(*) FROM tbl_user WHERE email = :email';
+    $query = ' SELECT COUNT(*) FROM tbl_register WHERE user_email = :email';
     $get_info = $pdo->query($query);
     $results->execute(
     array(
-        ':email'=>$email
+        ':email'=>$user_email
     )
     );
     $email_mateh = $get_info->fetchColumn();
     if($email_match > 0){
 
-        $update_user_query = 'UPDATE tbl_user SET lastupdate = date("h:i:sa") WHERE email = :email';
+        $update_user_query = 'UPDATE tbl_register SET user_lastupdate = date("h:i:sa") WHERE user_email = :email';
         $message = 'You already signed up!';
         return $message;
     }
@@ -20,26 +20,26 @@ function createSubscriber($firstname, $lastname, $email, $country) {
     while($row = $get_info->fetch(PDO::FETCH_ASSOC)) {
         $results[] = $row;
 
-        $update_query = "INSERT INTO tbl_users (user_firstname, user_lastname, user_email, user_country, user_subscribe, user_lastupdate, user_ip)
+        $update_query = "INSERT INTO tbl_register (user_fname, user_lname, user_email, user_country, user_subdate, user_lastupdate)
         VALUES ('firstname', 'lastname', 'email', 'country')
         ON DUPLICATE KEY UPDATE
-        user_firstname = values(firstname),
-        user_lastname = values(lastname),
+        user_fname = values(firstname),
+        user_lname = values(lastname),
         user_country = values(country);";
 
     }
 
 
 
-   $create_query = 'INSERT INTO tbl_users(firstname, lastname, email, country)';
+   $create_query = 'INSERT INTO tbl_register(user_fname, user_lname, user_email, user_country)';
    $create_query .= ' VALUES(:firstname, :lastname, :email, :country)';
    $create_user = $pdo->prepare($create_query);
    $create_user->execute(
        array(
-          ':firstname'=>$firstname,
-          ':lastname'=>$lastname,
-          ':email'=>$email,
-          ':country'=>$country
+          ':firstname'=>$user_fname,
+          ':lastname'=>$user_lname,
+          ':email'=>$user_email,
+          ':country'=>$user_country
        )
        );
     if($create_user->rowCount()){
