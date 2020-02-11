@@ -1,6 +1,17 @@
 <?php 
 ini_set('display_errors', 1);
-require_once ('scripts/config.php');
+require_once ('script/config.php');
+
+
+
+if(isset($_GET['country'])){
+
+    $cou = 'country_name';
+
+}
+
+
+
 
 if (empty($_POST)) {
     echo 'No...';
@@ -14,15 +25,14 @@ if (isset($_POST['submit'])){
     $country = trim($_POST['country']);
 }
 
-if (empty($firstname) || empty($lastname) || empty($email) | empty($country)) {
-    $message = "Please filled in the required fields";
-} elseif (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    
-    $message = 'Please use a valid email';
-} else {
-    
-    $result = createSubscriber($firstname, $lastname, $email, $country);
-    $message = $result;
-}
-
-echo json_encode($result);
+if(empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['email']) || empty($_POST['country'])){
+        $message = 'Please fill in required fields';
+    } else {
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $country = $_POST['country'];
+        var_dump();
+        $result = createSubscriber($firstname, $lastname, $email, $country);
+    }
+        echo json_encode($message);

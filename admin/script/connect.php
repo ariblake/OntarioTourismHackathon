@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+require_once ('config.php');
+
 class Database
 {
     // Note: specify your own database credentials
@@ -38,18 +41,5 @@ class Database
         }
     }
 
-    // get the database connection
-    public function getConnection()
-    {
-        // $this->conn = null;
-        return $this->conn;
-    }
-    
-        public static function getInstance(){
-            if(!self::$instance){
-                self::$instance = new Database();
-            }
-
-            return self::$instance;
-        }
 }
+
