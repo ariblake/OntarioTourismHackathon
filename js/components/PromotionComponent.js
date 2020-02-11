@@ -42,7 +42,7 @@ export default {
     //             { src: "gallery1.jpg", alt: "image of "},
     //             { src: "gallery1.jpg", alt: "image of "},
     //         ]
-    
+
     //     }
     // })
 }
