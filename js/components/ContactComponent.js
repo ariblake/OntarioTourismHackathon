@@ -1,13 +1,12 @@
 import HeaderComponent from "./layout/HeaderComponent.js";
-import HeroComponent from "./layout/HeroComponent.js";
+// import HeroComponent from "./layout/HeroComponent.js";
 import FormComponent from "./layout/FormComponent.js";
 import FooterComponent from "./layout/FooterComponent.js";
 
 export default {
     template: `
     <section>
-        <HeaderComponent/>
-        <HeroComponent message="Register for more information!"/>
+        <HeaderComponent message="Register for more information!"/>
         <FormComponent/>
         <FooterComponent/>
     </section>
@@ -15,7 +14,7 @@ export default {
 
     components: {
         HeaderComponent: HeaderComponent,
-        HeroComponent: HeroComponent,
+        // HeroComponent: HeroComponent,
         FormComponent: FormComponent,
         FooterComponent: FooterComponent
     }

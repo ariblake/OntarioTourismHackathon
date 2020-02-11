@@ -1,5 +1,4 @@
 import HeaderComponent from "./layout/HeaderComponent.js";
-import HeroComponent from "./layout/HeroComponent.js";
 import IntroComponent from "./layout/IntroComponent.js";
 import VideoComponent from "./layout/VideoComponent.js";
 import ExploreComponent from "./layout/ExploreComponent.js";
@@ -9,8 +8,8 @@ import FooterComponent from "./layout/FooterComponent.js";
 export default {
     template: `
     <section>
-        <HeaderComponent/>
-        <HeroComponent message="Find Yourself at Home"/>
+        <HeaderComponent message="Find Yourself at Home"/>
+        
         <IntroComponent/>
         <VideoComponent/>
         <ExploreComponent
@@ -24,7 +23,6 @@ export default {
 
     components: {
         HeaderComponent: HeaderComponent,
-        HeroComponent: HeroComponent,
         IntroComponent: IntroComponent,
         VideoComponent: VideoComponent,
         ExploreComponent: ExploreComponent,
