@@ -24,3 +24,30 @@
         background-color: #eab01f;
     }
 }
+
+h1 {
+    font-family: $header-font;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: $header-font;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: $header-font;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: $header-font;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+p {
+    font-family: $body-font;
+}

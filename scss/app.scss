@@ -1,6 +1,14 @@
 @charset 'utf-8';
 
 @import 'settings';
+@import '_vars';
+@import 'modules/_header';
+@import 'modules/_intro';
+@import 'modules/_video';
+@import 'modules/_explore';
+@import 'modules/_gallery';
+@import 'modules/_register';
+@import 'modules/_footer';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -47,7 +55,7 @@
 @include foundation-dropdown-menu;
 
 // Layout components
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-reveal;
 @include foundation-sticky;
 @include foundation-title-bar;
@@ -55,7 +63,7 @@
 
 // Helpers
 @include foundation-float-classes;
-@include foundation-flex-classes;
+// @include foundation-flex-classes;
 @include foundation-visibility-classes;
 // @include foundation-prototype-classes;
 
