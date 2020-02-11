@@ -1,21 +1,44 @@
 <?php
 
-$db_dsn = array(
-	'host' => 'localhost',
-	'dbname' => 'db_ontario',
-	'charset' => 'utf8'
-);
+class Database
+{
+    private $host = "localhost";
+    private $db_name = "ontario_form";
+    private $username = "root";
+    private $password = "root";
+    public $conn;
 
+    // get the database connection
+    public function getConnection()
+    {
 
-$dsn = 'mysql:' . http_build_query($db_dsn, '', ';');
-$db_user = 'root';
-$db_pass = 'root';
+        $this->conn = null;
 
+        $db_dsn = array(
+            'host'    => $this->host,
+            'dbname'  => $this->db_name,
+            'charset' => 'utf8',
+        );
 
+        if (getenv('IDP_ENVIRONMENT') === 'docker') {
+            $db_dsn['host'] = 'mysql';
+            $this->username = 'docker_u';
+            $this->password = 'docker_p';
+        }
 
-try {
-	$pdo = new PDO($dsn, $db_user, $db_pass);
-} catch (PDOException $exception) {
-	echo 'Connection Error: ' . $exception->getMessage();
-	exit();
+        try {
+            $dsn        = 'mysql:' . http_build_query($db_dsn, '', ';');
+            $this->conn = new PDO($dsn, $this->username, $this->password);
+        } catch (PDOException $exception) {
+            echo json_encode(
+                array(
+                    'error'   => 'Database connection failed',
+                    'message' => $exception->getMessage(),
+                )
+            );
+            exit;
+        }
+
+        return $this->conn;
+    }
 }
