@@ -6,7 +6,7 @@ import FooterComponent from "./layout/FooterComponent.js";
 export default {
     template: `
     <section>
-        <HeaderComponent message="Register for more information!"/>
+        <HeaderComponent message="Register to start your adventure"/>
         <FormComponent/>
         <FooterComponent/>
     </section>

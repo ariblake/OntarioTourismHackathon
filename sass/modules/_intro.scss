@@ -1,7 +1,11 @@
 #introSection {
     height: $fullscreen;
     text-align: center;
-    padding-top: 40%;
+    padding: 15% 8%;
+
+    h2 {
+        margin-bottom: 5%;
+    }
 
     p {
         margin-bottom: 10%;
